@@ -7,7 +7,7 @@ class ReturnsController < ApplicationController
         overdraft_book = Overdraft.where(user_id: return_params[:user_id], library_id: return_params[:library_id])
         overdraft_book.destroy_all if overdraft_book.present?
 
-        render json: 'Devolución realizado con éxito'
+        render json: 'Devolución realizada con éxito'
     end
 
     private
